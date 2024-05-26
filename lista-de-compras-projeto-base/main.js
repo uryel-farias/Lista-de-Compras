@@ -5,6 +5,7 @@ const itensInput = document.getElementById("receber-item");
 
 form.addEventListener("submit", function(evento){
     evento.preventDefault();
+    salvarItem();
 })
 
 function salvarItem() {
@@ -13,6 +14,8 @@ function salvarItem() {
     listaDeItens.push ({
         valor: comprasItem
     })
+
+    console.log(listaDeItens);
 
 
 }
