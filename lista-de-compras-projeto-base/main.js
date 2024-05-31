@@ -44,5 +44,15 @@ function salvarItem() {
         </li>
         `
         })
+
+        const inputCheck = document.querySelectorAll('input[type="checkbox"]');
+
+        inputCheck.forEach( i => {
+            i.addEventListener('click', () => {
+                console.log("Fui clicado.")
+            });
+        });
+
+
     }
 
