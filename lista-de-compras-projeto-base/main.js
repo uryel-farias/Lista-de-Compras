@@ -48,8 +48,8 @@ function salvarItem() {
         const inputCheck = document.querySelectorAll('input[type="checkbox"]');
 
         inputCheck.forEach( i => {
-            i.addEventListener('click', () => {
-                console.log("Fui clicado.")
+            i.addEventListener('click', (evento) => {
+                console.log(evento.target.parentElement.parentElement.getAttribute('data-value'))
             });
         });
 
