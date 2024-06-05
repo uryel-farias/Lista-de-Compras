@@ -10,6 +10,7 @@ form.addEventListener("submit", function(evento){
     evento.preventDefault();
     salvarItem();
     mostrarItem();
+    itensInput.focus();
 })
 
 function salvarItem() {
@@ -27,7 +28,7 @@ function salvarItem() {
         })
     }
 
-    console.log(listaDeItens);
+    itensInput.value = '';
     }
 
     function mostrarItem() {
@@ -68,6 +69,7 @@ function salvarItem() {
             i.addEventListener('click', (evento) => {
                 const valorDoElemento = evento.target.parentElement.parentElement.getAttribute('data-value')
                 listaDeItens[valorDoElemento].checar = evento.target.checked
+                mostrarItem()
 
             });
         });
