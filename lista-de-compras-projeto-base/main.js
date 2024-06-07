@@ -74,6 +74,19 @@ function salvarItem() {
             });
         });
 
+        const deletarObjeto = document.querySelectorAll(".deletar");
+
+        deletarObjeto.forEach( i => {
+            i.addEventListener('click', (evento) => {
+                const valorDoElemento = evento.target.parentElement.parentElement.getAttribute('data-value')
+                listaDeItens.splice(valorDoElemento, 1)
+                mostrarItem()
+
+            });
+        });
+
+
+
 
     }
 
