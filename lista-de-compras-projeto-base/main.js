@@ -57,6 +57,7 @@ function salvarItem() {
                 <input type="text" class="is-size-5" value="${elemento.valor}"></input>
             </div>
             <div>
+                <i class="fa-regular fa-floppy-disk is-clickable"></i><i class="fa-regular is-clickable fa-pen-to-square editar"></i>
                 <i class="fa-solid fa-trash is-clickable deletar"></i>
             </div>
             </li>
