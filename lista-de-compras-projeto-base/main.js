@@ -1,4 +1,5 @@
 let listaDeItens = [];
+let itemAeditar
 
 const form = document.getElementById("form-itens");
 const itensInput = document.getElementById("receber-item");
@@ -86,6 +87,16 @@ function salvarItem() {
             });
         });
 
+        const editarItens = document.querySelectorAll(".editar")
+        editarItens.forEach( i => {
+            i.addEventListener('click', (evento) => {
+               itemAeditar = evento.target.parentElement.parentElement.getAttribute('data-value')
+
+                mostrarItem()
+
+            });
+        });
+        
 
 
 
